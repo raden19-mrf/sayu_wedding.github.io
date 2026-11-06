@@ -1,0 +1,272 @@
+@keyframes bp-skeleton-pulse {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
+}
+
+/* --- Anti-FOUC: Hide dynamic content until data is ready --- */
+.bp-guest-loading .bp-dynamic-guest-name,
+.bp-guest-loading .bp-dynamic-guest-category,
+.bp-guest-loading .bp-dynamic-guest-pax,
+.bp-guest-loading .bp-dynamic-qr-image-wrap {
+	visibility: hidden;
+}
+
+/* --- Skeleton Loading Shimmer (applied during API fetch) --- */
+.bp-skeleton-loading {
+	color: transparent !important;
+	background: linear-gradient(90deg, rgba(200,200,200,0.15) 25%, rgba(200,200,200,0.3) 50%, rgba(200,200,200,0.15) 75%) !important;
+	background-size: 200% 100% !important;
+	animation: bp-skeleton-pulse 1.5s infinite !important;
+	border-radius: 4px;
+	min-width: 80px;
+	min-height: 1.2em;
+	display: inline-block !important;
+}
+
+/* --- Smooth Reveal Transition --- */
+.bp-dynamic-guest-name,
+.bp-dynamic-guest-category,
+.bp-dynamic-guest-pax,
+.bp-dynamic-qr-image-wrap {
+	transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
+}
+
+.bp-data-ready .bp-dynamic-guest-name,
+.bp-data-ready .bp-dynamic-guest-category,
+.bp-data-ready .bp-dynamic-guest-pax,
+.bp-data-ready .bp-dynamic-qr-image-wrap {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* --- Widget Specific placeholders --- */
+.bp-qr-placeholder {
+	width: 200px;
+	height: 200px;
+	background: #f8f8f8;
+	border: 2px dashed #ddd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.bp-souvenir-placeholder {
+	padding: 10px 20px;
+	background: #eee;
+	border-radius: 30px;
+	display: inline-block;
+}
+
+/* Loading overlay for whole widgets */
+.bp-widget-loading {
+	position: relative;
+	pointer-events: none;
+}
+
+.bp-widget-loading::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.5);
+	cursor: wait;
+	z-index: 10;
+}
+
+/* Animations */
+@keyframes bp-fade-in {
+	from { opacity: 0; transform: translateY(10px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.bp-animate-fade-in {
+	animation: bp-fade-in 0.5s ease-out forwards;
+}
+
+/* QR Code wrapper layout */
+.bp-dynamic-qr-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.bp-qr-download-btn-wrap {
+	width: 100%;
+	text-align: inherit;
+}
+
+/* QR Code dynamic sizing fix */
+.bp-dynamic-qr-image {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.bp-dynamic-qr-image-wrap {
+	display: inline-block;
+	overflow: hidden;
+}
+
+/* --- Premium Animations for Status Widgets --- */
+@keyframes bp-float-old {
+	0% { transform: translateY(0px); }
+	50% { transform: translateY(-4px); }
+	100% { transform: translateY(0px); }
+}
+
+@keyframes bp-shimmer {
+	0% { background-position: -200% 0; }
+	100% { background-position: 200% 0; }
+}
+
+.bp-status-animate {
+	animation: bp-float-old 3s ease-in-out infinite;
+	display: inline-flex;
+}
+
+/* --- Common optimization for all status animations --- */
+[class*="bp-anim-"] {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+/* --- Pulse Animation --- */
+@keyframes bp-pulse {
+	0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255, 0.4); }
+	50% { transform: scale(1.06); box-shadow: 0 0 0 12px rgba(255,255,255, 0); }
+	100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255, 0); }
+}
+.bp-anim-pulse {
+	animation: bp-pulse 2s infinite ease-in-out !important;
+}
+
+/* --- Bounce Animation --- */
+@keyframes bp-bounce {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-10px); }
+}
+.bp-anim-bounce {
+	animation: bp-bounce 2s infinite ease-in-out !important;
+}
+
+/* --- Float Animation (Premium) --- */
+@keyframes bp-float {
+	0% { transform: translateY(0px); }
+	50% { transform: translateY(-6px); }
+	100% { transform: translateY(0px); }
+}
+.bp-anim-float {
+	animation: bp-float 3s ease-in-out infinite !important;
+}
+
+/* --- Main Layout Frame --- */
+.bp-dynamic-guest-wrapper {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch !important; /* Force children to take full width */
+}
+
+/* --- Layout System for Guest Name, Category, Pax --- */
+.bp-dynamic-guest-name-wrapper,
+.bp-dynamic-guest-category-wrapper,
+.bp-dynamic-guest-pax-wrapper {
+    width: 100% !important;
+    display: flex;
+    flex-direction: row; /* Default row for layout classes to override if stacked */
+}
+
+/* Force spans to inherit alignment */
+.bp-dynamic-guest-name-wrapper span,
+.bp-dynamic-guest-category-wrapper span,
+.bp-dynamic-guest-pax-wrapper span {
+    text-align: inherit !important;
+}
+
+.bp-layout-block {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+}
+
+.bp-layout-inline {
+    display: flex;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0.25em !important;
+}
+
+/* Ensure spans inside block layout take full width for proper alignment handling */
+.bp-layout-block > span,
+.bp-layout-block > div {
+    display: block;
+    width: 100% !important;
+}
+
+/* --- Typing Animation Effect --- */
+.bp-anim-typing {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.bp-typed-cursor {
+    display: inline-block;
+    width: 2px;
+    margin-left: 2px;
+    background-color: currentColor;
+    animation: bp-blink .75s step-end infinite;
+    vertical-align: middle;
+    height: 1.1em;
+}
+
+@keyframes bp-blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.bp-typed-block {
+    background-color: var(--e-global-color-primary, #0073e6);
+    color: #fff;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+/* --- QR Download Button Base Style --- */
+.bp-qr-download-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center;
+    gap: 0.5em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    /* Typography, color, padding, border, dll. dikontrol via Elementor Style Controls */
+}
+
+.bp-qr-download-btn .bp-qr-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.bp-qr-download-btn .bp-qr-btn-icon svg,
+.bp-qr-download-btn .bp-qr-btn-icon i {
+    width: 1em;
+    height: 1em;
+}
+
+/* Disable click and hover interaction on confirmed selfie check-in button */
+.bp-dynamic-selfie-btn.bp-is-confirmed {
+    pointer-events: none !important;
+    cursor: default !important;
+}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayu Wedding Invitation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#faf7f5',
+                            100: '#f3ece7',
+                            200: '#e5d6cb',
+                            500: '#b89474',
+                            600: '#a37c5b',
+                            800: '#5c4533',
+                            900: '#36291e',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c5a880;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-50 text-slate-800 font-sans antialiased selection:bg-brand-200">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-brand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <span class="font-serif text-3xl font-bold text-brand-900 tracking-tight">Vows<span
+                        class="text-brand-500">&amp;</span>Memories</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                <a href="#katalog" class="hover:text-brand-600 transition-colors">Katalog Template</a>
+                <a href="#fitur" class="hover:text-brand-600 transition-colors">Fitur Utama</a>
+                <a href="#harga" class="hover:text-brand-600 transition-colors">Paket Harga</a>
+                <a href="#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/6281228702476?text=Halo%2C%20saya%20ingin%20konsultasi%20pemesanan%20template%20undangan"
+                    target="_blank"
+                    class="px-5 py-2.5 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-medium text-sm transition-all shadow-sm hover:shadow">
+                    <i class="fa-brands fa-whatsapp mr-1.5"></i> Konsultasi Gratis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION ELEGAN DENGAN BACKGROUND FOTO PERNIKAHAN -->
+    <section class="relative min-h-[85vh] flex items-center justify-center py-24 overflow-hidden">
+        <!-- Background Image dengan Overlay Gradient Soft -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80"
+                alt="Wedding Atmosphere"
+                class="w-full h-full object-cover object-center filter brightness-[0.9] transform scale-105 animate-pulse duration-10000">
+            <!-- Overlay Masking untuk Keterbacaan Teks Maksimal -->
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-900/60 to-brand-50"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Badge Top -->
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-100 font-medium text-xs sm:text-sm tracking-wider uppercase mb-6 shadow-inner">
+                <i class="fa-solid fa-sparkles text-brand-500"></i> Katalog Undangan Digital Estetik
+            </div>
+
+            <!-- Main Heading -->
+            <h1
+                class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.15] mb-6 drop-shadow-md">
+                Bagikan Momen Bahagia Anda <br class="hidden sm:inline">
+                <span class="italic font-normal text-brand-200">dengan Sentuhan Elegan</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p
+                class="text-slate-200 text-base sm:text-xl font-light leading-relaxed max-w-3xl mx-auto mb-10 drop-shadow">
+                Pilih template undangan pernikahan web premium yang responsif, interaktif, dan dapat disesuaikan
+                sepenuhnya dengan konsep pernikahan impian Anda.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#katalog"
+                    class="w-full sm:w-auto px-9 py-4 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-medium text-base transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <span>Lihat Semua Template</span>
+                    <i class="fa-solid fa-arrow-down text-sm"></i>
+                </a>
+                <a href="#harga"
+                    class="w-full sm:w-auto px-9 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md font-medium text-base transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <span>Cek Daftar Paket</span>
+                    <i class="fa-solid fa-tags text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Stats / Highlights Quick Info -->
+            <div
+                class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-white/80 text-xs sm:text-sm">
+                <div>
+                    <p class="font-serif text-2xl sm:text-3xl font-bold text-white">50+</p>
+                    <p class="text-slate-300 font-light">Pilihan Desain Premium</p>
+                </div>
+                <div>
+                    <p class="font-serif text-2xl sm:text-3xl font-bold text-white">100%</p>
+                    <p class="text-slate-300 font-light">Responsif di Smartphone</p>
+                </div>
+                <div>
+                    <p class="font-serif text-2xl sm:text-3xl font-bold text-white">Fitur</p>
+                    <p class="text-slate-300 font-light">RSVP &amp; Amplop QRIS</p>
+                </div>
+                <div>
+                    <p class="font-serif text-2xl sm:text-3xl font-bold text-white">Cepat</p>
+                    <p class="text-slate-300 font-light">Proses Pengerjaan 1-2 Hari</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="katalog" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-2">Pilihan Template Populer
+                    </h2>
+                    <p class="text-slate-500">Temukan desain yang paling pas untuk momen istimewa Anda</p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0" id="filter-container">
+                    <button onclick="filterTemplate('all')"
+                        class="filter-btn active px-5 py-2.5 rounded-full text-sm font-medium bg-brand-900 text-white transition-all whitespace-nowrap shadow-sm">Semua</button>
+                    <button onclick="filterTemplate('minimalist')"
+                        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium bg-slate-100 text-slate-600 hover:bg-brand-100 transition-all whitespace-nowrap">Minimalis</button>
+                    <button onclick="filterTemplate('floral')"
+                        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium bg-slate-100 text-slate-600 hover:bg-brand-100 transition-all whitespace-nowrap">Floral</button>
+                    <button onclick="filterTemplate('dark')"
+                        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium bg-slate-100 text-slate-600 hover:bg-brand-100 transition-all whitespace-nowrap">Aesthetic
+                        Dark</button>
+                    <button onclick="filterTemplate('elegant')"
+                        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium bg-slate-100 text-slate-600 hover:bg-brand-100 transition-all whitespace-nowrap">Elegant
+                        Arch</button>
+                </div>
+            </div>
+
+            <!-- Template Grid Container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="template-grid">
+
+                <!-- Item 1: Wangsa & Raissa -->
+                <div class="template-card group bg-brand-50 rounded-2xl overflow-hidden border border-brand-100 hover:shadow-2xl transition-all duration-300"
+                    data-category="minimalist">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+                        <img src="./assets/templates/Undang-Sepuasnya-Instagram-Post.webp"
+                            alt="Template Wangsa & Raissa"
+                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <a href="./ulemanti.id/allure/index.html" target="_blank"
+                                class="px-5 py-2.5 rounded-full bg-white text-slate-900 text-xs font-semibold hover:bg-brand-100 transition-all shadow-md">
+                                <i class="fa-solid fa-eye mr-1"></i> Preview Undangan Wangsa &amp; Raissa
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Minimalis /
+                            Modern</span>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mt-1 mb-2">Wangsa &amp; Raissa</h3>
+                        <p class="text-slate-500 text-sm mb-4">Desain galeri foto grid yang unik dan modern dengan
+                            sentuhan gaya urban aesthetic.</p>
+                        <div class="flex items-center justify-between border-t border-brand-200/60 pt-4">
+                            <span class="text-xs font-medium text-slate-500"><i class="fa-solid fa-music mr-1"></i>
+                                Music + RSVP</span>
+                            <button
+                                onclick="openPreview('./assets/templates/Undang-Sepuasnya-Instagram-Post.webp', 'Wangsa & Raissa')"
+                                class="text-sm font-semibold text-brand-900 hover:text-brand-600 transition-colors">
+                                Lihat Details <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Dedi & Fahmi -->
+                <div class="template-card group bg-brand-50 rounded-2xl overflow-hidden border border-brand-100 hover:shadow-2xl transition-all duration-300"
+                    data-category="dark">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+                        <img src="./assets/templates/Undang-Sepuasnya-Instagram-Post-1.webp" alt="Template Dedi & Fahmi"
+                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button
+                                onclick="openPreview('./assets/templates/Undang-Sepuasnya-Instagram-Post-1.webp', 'Dedi & Fahmi')"
+                                class="px-5 py-2.5 rounded-full bg-white text-slate-900 text-xs font-semibold hover:bg-brand-100 transition-all shadow-md">
+                                <i class="fa-solid fa-eye mr-1"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Aesthetic
+                            Dark</span>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mt-1 mb-2">Dedi &amp; Fahmi</h3>
+                        <p class="text-slate-500 text-sm mb-4">Nuansa gelap eksklusif dengan kutipan romantis dan
+                            bingkai foto sirkular yang dramatis.</p>
+                        <div class="flex items-center justify-between border-t border-brand-200/60 pt-4">
+                            <span class="text-xs font-medium text-slate-500"><i class="fa-solid fa-gem mr-1"></i>
+                                Premium Design</span>
+                            <button
+                                onclick="openPreview('./assets/templates/Undang-Sepuasnya-Instagram-Post-1.webp', 'Dedi & Fahmi')"
+                                class="text-sm font-semibold text-brand-900 hover:text-brand-600 transition-colors">
+                                Lihat Details <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Fajar & Amanda -->
+                <div class="template-card group bg-brand-50 rounded-2xl overflow-hidden border border-brand-100 hover:shadow-2xl transition-all duration-300"
+                    data-category="minimalist">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+                        <img src="./assets/templates/biqj4mkfs3cveje7zvd1.webp" alt="Template Fajar & Amanda"
+                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <a href="./ulemanti.id/liora/index.html" target="_blank"
+                                class="px-5 py-2.5 rounded-full bg-white text-slate-900 text-xs font-semibold hover:bg-brand-100 transition-all shadow-md">
+                                <i class="fa-solid fa-eye mr-1"></i> Preview Undangan Fajar &amp; Julia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Torn Paper /
+                            Warm</span>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mt-1 mb-2">Fajar &amp; Julia</h3>
+                        <p class="text-slate-500 text-sm mb-4">Gaya kertas sobek (torn paper) bertema warna krem hangat
+                            dan Countdown timer interaktif.</p>
+                        <div class="flex items-center justify-between border-t border-brand-200/60 pt-4">
+                            <span class="text-xs font-medium text-slate-500"><i class="fa-solid fa-clock mr-1"></i>
+                                Countdown</span>
+                            <button
+                                onclick="openPreview('./assets/templates/biqj4mkfs3cveje7zvd1.webp', 'Fajar & Julia')"
+                                class="text-sm font-semibold text-brand-900 hover:text-brand-600 transition-colors">
+                                Lihat Details <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Kirana & Andra -->
+                <div class="template-card group bg-brand-50 rounded-2xl overflow-hidden border border-brand-100 hover:shadow-2xl transition-all duration-300"
+                    data-category="elegant">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+                        <img src="./assets/templates/lrmoxr0egafurebfkeu1.webp" alt="Template Kirana & Andra"
+                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <a href="./ulemanti.id/dinantikahumam/index.html" target="_blank"
+                                class="px-5 py-2.5 rounded-full bg-white text-slate-900 text-xs font-semibold hover:bg-brand-100 transition-all shadow-md">
+                                <i class="fa-solid fa-eye mr-1"></i> Preview Undangan Kirana &amp; Andra
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Modern Arch</span>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mt-1 mb-2">Kirana &amp; Andra</h3>
+                        <p class="text-slate-500 text-sm mb-4">Bentuk bingkai melengkung (arch) elegan dipadukan dengan
+                            tipografi monogram modern.</p>
+                        <div class="flex items-center justify-between border-t border-brand-200/60 pt-4">
+                            <span class="text-xs font-medium text-slate-500"><i
+                                    class="fa-solid fa-map-location-dot mr-1"></i> Maps Integration</span>
+                            <button
+                                onclick="openPreview('./assets/templates/lrmoxr0egafurebfkeu1.webp', 'Kirana & Andra')"
+                                class="text-sm font-semibold text-brand-900 hover:text-brand-600 transition-colors">
+                                Lihat Details <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Diana & Partner -->
+                <div class="template-card group bg-brand-50 rounded-2xl overflow-hidden border border-brand-100 hover:shadow-2xl transition-all duration-300"
+                    data-category="dark">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+                        <img src="./assets/templates/Web-Invitation-Fitur-Order.webp" alt="Template Diana"
+                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button
+                                onclick="openPreview('./assets/templates/Web-Invitation-Fitur-Order.webp', 'Diana & Partner')"
+                                class="px-5 py-2.5 rounded-full bg-white text-slate-900 text-xs font-semibold hover:bg-brand-100 transition-all shadow-md">
+                                <i class="fa-solid fa-eye mr-1"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Editorial /
+                            Dark</span>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mt-1 mb-2">Diana &amp; Partner</h3>
+                        <p class="text-slate-500 text-sm mb-4">Gaya majalah fashion editorial kontemporer dengan
+                            tipografi huruf besar yang bold.</p>
+                        <div class="flex items-center justify-between border-t border-brand-200/60 pt-4">
+                            <span class="text-xs font-medium text-slate-500"><i class="fa-solid fa-gift mr-1"></i>
+                                Amplop Digital</span>
+                            <button
+                                onclick="openPreview('./assets/templates/Web-Invitation-Fitur-Order.webp', 'Diana & Partner')"
+                                class="text-sm font-semibold text-brand-900 hover:text-brand-600 transition-colors">
+                                Lihat Details <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6: Embun & Pagi (Floral) -->
+                <div class="template-card group bg-brand-50 rounded-2xl overflow-hidden border border-brand-100 hover:shadow-2xl transition-all duration-300"
+                    data-category="floral">
+                    <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+                        <img src="./assets/templates/April-1024x1024.webp" alt="Template Embun & Pagi Floral"
+                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button
+                                onclick="openPreview('./assets/templates/April-1024x1024.webp', 'Embun & Pagi - Floral')"
+                                class="px-5 py-2.5 rounded-full bg-white text-slate-900 text-xs font-semibold hover:bg-brand-100 transition-all shadow-md">
+                                <i class="fa-solid fa-eye mr-1"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Floral /
+                            Botanical</span>
+                        <h3 class="font-serif text-2xl font-bold text-slate-900 mt-1 mb-2">Embun &amp; Pagi (Floral)
+                        </h3>
+                        <p class="text-slate-500 text-sm mb-4">Hiasan ornamen dedaunan hijau alami memberikan nuansa
+                            lembut, segar, dan romantis.</p>
+                        <div class="flex items-center justify-between border-t border-brand-200/60 pt-4">
+                            <span class="text-xs font-medium text-slate-500"><i class="fa-solid fa-leaf mr-1"></i>
+                                Botanical Theme</span>
+                            <button
+                                onclick="openPreview('./assets/templates/April-1024x1024.webp', 'Embun & Pagi - Floral')"
+                                class="text-sm font-semibold text-brand-900 hover:text-brand-600 transition-colors">
+                                Lihat Details <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Preview -->
+    <div id="preview-modal"
+        class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl transform transition-all">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100">
+                <h3 id="modal-title" class="font-serif text-xl font-bold text-slate-900">Preview Template</h3>
+                <button onclick="closePreview()" class="text-slate-400 hover:text-slate-600 text-xl font-bold p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-4 bg-slate-100 flex justify-center max-h-[75vh] overflow-y-auto custom-scrollbar">
+                <img id="modal-image" src="" alt="Preview Template"
+                    class="max-w-full h-auto rounded-lg shadow-md border border-slate-200">
+            </div>
+            <div class="px-6 py-4 bg-white border-t border-slate-100 flex items-center justify-between gap-4">
+                <button onclick="closePreview()"
+                    class="px-5 py-2.5 rounded-full border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50">
+                    Tutup
+                </button>
+                <a id="modal-order-btn" href="https://wa.me/6281228702476" target="_blank"
+                    class="px-6 py-2.5 rounded-full bg-brand-500 hover:bg-brand-600 text-white text-sm font-medium transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan Template Ini
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Filter & Modal Interaktif -->
+    <script>
+        function filterTemplate(category) {
+            const cards = document.querySelectorAll('.template-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-900', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-slate-100', 'text-slate-600');
+            });
+
+            event.target.classList.remove('bg-slate-100', 'text-slate-600');
+            event.target.classList.add('bg-brand-900', 'text-white', 'shadow-sm');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openPreview(imageSrc, title) {
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('modal-title').innerText = 'Preview: ' + title;
+
+            // Format WhatsApp URL dengan pesan otomatis yang rapi
+            const message = encodeURIComponent('Halo, saya ingin memesan template undangan ' + title);
+            document.getElementById('modal-order-btn').href = 'https://wa.me/6281228702476?text=' + message;
+
+            document.getElementById('preview-modal').classList.remove('hidden');
+        }
+
+        function closePreview() {
+            document.getElementById('preview-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>
